@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Load jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Load jQuery UI after jQuery -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">  <!-- jQuery UI Styles -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>  <!-- jQuery UI -->
+    <!-- tether cdn code for popvers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
+
+    <!-- Load Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Load Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ <!-- Font Awesome CDN -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="amazon.css">
+</head>
+<style>
+  #boxes a:hover{
+    color: #D8DEE3 !important;
+     cursor: pointer !important;
+ }
+</style>
+<body>
+    <header>
+        <div id="navbar">
+    <a href="#"id="img1"><img src="img/amazon.PNG" alt=""></a>
+    <a href=""id="img2"><img src="img/location.PNG" alt=""></a>
+    
+        <select id="searchDropdownDescription" class="nav" name="url" style="top: 12.5px;" tabindex="0" title="Search in">
+    <option selected value="search-alias=aps">All</option>
+    <option value="search-alias=arts-crafts-intl-ship">Arts &amp; Crafts</option>
+    <option value="search-alias=automotive-intl-ship">Automotive</option>
+    <option value="search-alias=baby-products-intl-ship">Baby</option>
+    <option value="search-alias=beauty-intl-ship">Beauty &amp; Personal Care</option>
+    <option value="search-alias=stripbooks-intl-ship">Books</option>
+            <option value="search-alias=fashion-boys-intl-ship">Boys' Fashion</option>
+        <option value="search-alias=computers-intl-ship">Computers</option>
+        <option value="search-alias=deals-intl-ship">Deals</option>
+        <option value="search-alias=digital-music">Digital Music</option>
+        <option value="search-alias=electronics-intl-ship">Electronics</option>
+        <option value="search-alias=fashion-girls-intl-ship">Girls' Fashion</option>
+        <option value="search-alias=hpc-intl-ship">Health &amp; Household</option>
+        <option value="search-alias=kitchen-intl-ship">Home &amp; Kitchen</option>
+        <option value="search-alias=industrial-intl-ship">Industrial &amp; Scientific</option>
+        <option value="search-alias=digital-text">Kindle Store</option>
+        <option value="search-alias=luggage-intl-ship">Luggage</option>
+        <option value="search-alias=fashion-mens-intl-ship">Men's Fashion</option>
+        <option value="search-alias=movies-tv-intl-ship">Movies &amp; TV</option>
+        <option value="search-alias=music-intl-ship">Music, CDs &amp; Vinyl</option>
+        <option value="search-alias=pets-intl-ship">Pet Supplies</option>
+        <option value="search-alias=instant-video">Prime Video</option>
+        <option value="search-alias=software-intl-ship">Software</option>
+        <option value="search-alias=sporting-intl-ship">Sports &amp; Outdoors</option>
+        <option value="search-alias=tools-intl-ship">Tools &amp; Home Improvement</option>
+        <option value="search-alias=toys-and-games-intl-ship">Toys &amp; Games</option>
+        <option value="search-alias=videogames-intl-ship">Video Games</option>
+        <option value="search-alias=fashion-womens-intl-ship">Women's Fashion</option>
+</select>
+   <input type="text" name="sreach" id="sreach"placeholder="sreach Amazon">
+   <button id="btn"><img src="img/serch.PNG" alt="" ></button>
+
+<div>
+    <a href="#"id="move"><img src="img/eng.PNG" alt=""></a>
+    <a href="php.html"id="move2"><img src="img/sign.PNG" alt=""></a>
+      <a href="#"id="move3"><img src="img/re.PNG" alt=""></a>
+        <a href="#"id="move4"><img src="img/we.PNG" alt=""></a>
+    </div>
+    <!-- <img id="pak" src="/img/pakistan.PNG" alt="">
+  <select name="flag" id="flag">
+    <option value="volvo"> pak </option>
+    <option value="saab">eng</option>
+    <option value="opel">india</option>
+    <option value="audi">America</option>
+  </select> -->
+    </header>
+<div id="container">
+   
+    <a href="" class="same"><img id="all"  src="img/m.PNG" alt="">All</a>
+    <a href="" class="same">Today's Deals</a>
+    <a href="" class="same">Registry</a>
+    <a href="" class="same">Prime Video</a>
+    <a href="" class="same">Gift Cards</a>
+    <a href="" class="same">Customer Service</a>
+    <a href="" class="same">Sell</a>
+</div>
+<main id="content">
+    <svg class="default-ltr-cache-afh1q5" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg>
+        
+<div id="primary" ><img id="mainImage" src="img/kitch.PNG" alt=""></div>
+
+  <svg class="left" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronLeftStandard" aria-hidden="true">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path>
+</svg>
+
+</main>
+<!-- <div id="boxes">
+    <div>
+        <h2>Fashion trends you like</h2>
+        <img class="amazon" src="/img/fashion.PNG" alt="">
+        <a href="#">Explore more</a>
+    </div>
+
+    <div> <h2 class="trend">Get your game on</h2>
+        <img class="amazon" src="/img/ka.PNG" alt="">
+        <a href="#">Shop gaming</a></div>
+
+    <div> <h2 class="trend">Top categories in Kitchen appliances</h2> <img class="amazon" src="/img/cookr.PNG" alt="">
+        <a href="#">Explore all products in Kitchen</a></div>
+</div> -->
+<div id="boxes">
+    <div class="box">
+        <h2>Fashion trends you like</h2>
+        <img class="amazon1" src="img/fi.PNG" alt="">
+        <a href="https://www.amazon.com/">Explore more</a>
+    </div> 
+    <div class="box1"> 
+        <h2 >Get your game on</h2>
+         <img class="amazon2" src="img/ka.PNG" alt="">
+        <a  href="https://www.amazon.com/">Shop gaming</a> 
+    </div> 
+     <div class="box2">
+         <h2 >Top categories in Kitchen appliances</h2>
+       <img class="amazon3" src="img/cookr.PNG" alt=""> 
+        <a  href="https://www.amazon.com/">Explore all products in Kitchen</a>  
+    </div> 
+     <div class="box3">
+       <h2>Shop for your home essentials</h2> 
+         <img class="amazon4" src="img/roon.PNG" alt=""> 
+         <a  href="https://www.amazon.com/">Discover more in Home</a> 
+    </div>
+</div>
+
+<div id="another">
+  <div id="box4">
+    <h2>new home arrivals under $50</h2>
+    <img id="amazon5" src="img/toy.PNG" alt="">
+    <a href="https://www.amazon.com/">shop now</a>
+  </div>
+  <div id="box5"><h2>Shop Fashion for less
+     </h2><img id="amazon6" src="img/dess.PNG" alt=""> 
+     <a href="https://www.amazon.com/">see all deal</a>
+  </div>
+  <div id="box6"><h2>Toys under $25</h2><img id="amazon7" src="img/shh.PNG" alt=""> <a href="https://www.amazon.com/">shop the lastest form home</a>
+  </div>
+  <div id="box7"><h2>Refresh your space</h2><img id="amazon8" src="img/app.PNG" alt="">
+    <a href="https://www.amazon.com/">see more</a>
+  </div>
+</div>
+
+<main class="contain">
+  <h3>Popular products in Wireless internationally</h3>
+   <svg class="default-cache-afh1q5" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg>
+       <svg class="lef" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronLeftStandard" aria-hidden="true">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path>
+</svg> 
+<div class="scroll-container">
+    <img src="img/air.PNG" alt="">
+    <img src="img/air budd.PNG" alt="">
+    <img src="img/air bud.PNG" alt="">
+    <img src="img/a.PNG" alt="">
+    <img src="img/ar.PNG" alt="">
+     <img src="img/next.PNG" alt="">
+     <img src="img/pjone2.PNG" alt="">
+    <img src="img/pro.PNG" alt="">
+    <img src="img/asi.PNG" alt="">
+    <img src="img/tab.PNG" alt="">
+    <img src="img/pen.PNG" alt="">
+    <img src="img/last.PNG" alt="">
+    </div>
+  
+</main>
+
+
+<main id="main">
+ <h3>Top picks for Pakistan
+</h3>
+   <svg class="default-afh1q5" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg>
+       <svg class="le" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronLeftStandard" aria-hidden="true">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path>
+</svg>  
+<div class="scrollcontainer">
+    <img src="img/top.PNG" alt="">
+    <img src="img/to.PNG " alt="">
+    <img src="img/tt.PNG" alt="">
+    <img src="img/ttt.PNG" alt="">
+    <img src="img/tp.PNG" alt="">
+    <img src="img/pp.PNG" alt="">
+    <img src="img/t.PNG " alt="">
+    <img src="img/to.PNG" alt="">
+     <img src="img/p.PNG" alt=""> 
+     <img src="img/lat.PNG" alt="">
+    </div>
+</main>
+
+<main class="mainbox">
+  <div id="box8"><h2 id="h2">Elevate your Electronics
+</h2><img id="img8" src="img/box8.PNG" alt="">
+<a href="https://www.amazon.com/">see more</a>
+</div>
+<div id="box9" ><h2>Toys for all ages
+</h2><img id="img9" src="img/all age.PNG" alt="">
+<a href="https://www.amazon.com/">Discover more</a>
+</div>
+<div id="box10"><h2>Gaming merchandise
+</h2><img id="img10" src="img/box10.PNG" alt="">
+<a href="https://www.amazon.com/">see all</a>
+</div>
+<div id="box11"><h2>Gear up to get fit
+</h2><img id="img11" src="img/box11.PNG" alt="">
+<a href="https://www.amazon.com/">see more</a>
+</div>
+</main>
+
+<main id="mainscroll">
+ <h3>Best Sellers in Clothing, Shoes &internationally  Beauty products 
+
+</h3>
+   <svg class="defaultafh1q5" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg>
+       <svg class="let" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronLeftStandard" aria-hidden="true">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path>
+</svg>  
+<div class="scrollbar">
+    <img src="img/img1.PNG" alt="">
+    <img src="img/img2.PNG " alt="">
+    <img src="img/img3.PNG" alt="">
+    <img src="img/img4.PNG" alt="">
+    <img src="img/img5.PNG" alt="">
+    <img src="img/img10.PNG" alt="">
+    <img src="img/img9.PNG " alt="">
+    <img src="img/img8.PNG" alt="">
+     <img src="img/img7.PNG" alt=""> 
+     <img src="img/img6.PNG" alt="">
+    </div>
+</main>
+
+
+<section id="section">
+  
+ <h3>International top sellers in Kitchen
+</h3>
+   <svg class="defar" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg>
+       <svg class="it" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronLeftStandard" aria-hidden="true">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path>
+</svg>  
+<div class="scroll">
+  <img src="img/imgg3.PNG" alt="">
+  <img src="img/imgg1.PNG" alt="">
+    <img src="img/imgg2.PNG" alt="">
+    <img src="img/imgg4.PNG" alt="">
+    <img src="img/imgg5.PNG" alt="">
+    <img src="img/imgg10.PNG" alt="">
+    <img src="img/imgg9.PNG " alt="">
+    <img src="img/imgg8.PNG" alt="">
+     <img src="img/imgg7.PNG" alt=""> 
+     <img src="img/imgg6.PNG" alt="">
+    </div>
+
+</section>
+
+<section class="ajax">
+  <div id="box12"><h2 id="h2">Deals on top categories
+</h2><img id="img12" src="img/box12.PNG" alt="">
+<a href="https://www.amazon.com/">see more</a>
+</div>
+<div id="box13" ><h2>Most-loved watches
+</h2><img id="img13" src="img/box13.PNG" alt="">
+<a href="https://www.amazon.com/">Discover more</a>
+</div>
+<div id="box14"><h2>Wireless Tech
+</h2><img id="img14" src="img/box14.PNG" alt="">
+<a href="https://www.amazon.com/">see all</a>
+</div>
+<div id="box15"><h2>Have more fun with family
+</h2><img id="img15" src="img/box15.PNG" alt="">
+<a href="https://www.amazon.com/">see more</a>
+</div>
+</section>
+
+<section id="second">
+ <h3>Best Sellers in Home & Kitchen
+</h3>
+   <svg class="dfar" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg>
+       <svg class="onemore" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronLeftStandard" aria-hidden="true">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path>
+</svg>  
+<div class="scrollthat">
+  <img src="img/imo1.PNG" alt="">
+  <img src="img/imo3.PNG" alt="">
+    <img src="img/imo2.PNG" alt="">
+    <img src="img/imo4.PNG" alt="">
+    <img src="img/imo5.PNG" alt="">
+     <img src="img/imo6.PNG" alt="">
+    </div>
+</section>
+
+<section id="secondary">
+ <h3>Popular products in Apparel internationally
+</h3>
+   <svg class="defr" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg>
+       <svg class="home" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronLeftStandard" aria-hidden="true">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path>
+</svg>  
+<div class="scrollimg">
+  <img src="img/imm.PNG" alt="">
+  <img src="img/imm1.PNG" alt="">
+    <img src="img/imm2.PNG" alt="">
+    <img src="img/imm4.PNG" alt="">
+    <img src="img/imm5.PNG" alt="">
+    <img src="img/imm6.PNG" alt="">
+   <img src="img/imm7.PNG" alt="">
+   <img src="img/imm3.PNG" alt="">
+    </div>
+</section>
+
+<section id="last">
+  <div id="box16"><h2 id="h2">Level up your gaming
+</h2><img id="img16" src="img/box16.PNG" alt="">
+<a href="https://www.amazon.com/">see more</a>
+</div>
+<div id="box17" ><h2>Score the top PCs & Accessories
+</h2><img id="img17" src="img/box17.PNG" alt="">
+<a href="https://www.amazon.com/">Discover more</a>
+</div>
+<div id="box18"><h2>Finds for Home
+</h2><img id="img18" src="img/box18.PNG" alt="">
+<a href="https://www.amazon.com/">see all</a>
+</div>
+<div id="box19"><h2>Home & Kitchen essentials
+</h2><img id="img19" src="img/box19.PNG" alt="">
+<a href="https://www.amazon.com/">see more</a>
+</div> 
+</section>
+
+<section id="lastest">
+ <h3>Top Sellers in Toys for you
+</h3>
+   <svg class="def" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg>
+       <svg class="hom" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronLeftStandard" aria-hidden="true">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path>
+</svg>  
+<div class="scrolliamges">
+  <img src="img/im.PNG" alt="">
+  <img src="img/im1.PNG" alt="">
+    <img src="img/im2.PNG" alt="">
+    <img src="img/im4.PNG" alt="">
+    <img src="img/im5.PNG" alt="">
+    <img src="img/im6.PNG" alt="">
+   <img src="img/im7.PNG" alt="">
+   <img src="img/im3.PNG" alt="">
+   <img src="img/immm8.PNG" alt="">
+   <img src="img/im8.PNG" alt="">
+    </div>
+</section>
+
+
+<section id="length">
+ <h3>Best Sellers in Sports & Outdoors
+</h3>
+   <svg class="dfr" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg>
+       <svg class="hme" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronLeftStandard" aria-hidden="true">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path>
+</svg>  
+<div class="scrollimgg">
+  <img src="img/immm.PNG" alt="">
+  <img src="img/immm1.PNG" alt="">
+    <img src="img/immm2.PNG" alt="">
+    <img src="img/immm4.PNG" alt="">
+    <img src="img/immm5.PNG" alt="">
+    <img src="img/immm6.PNG" alt="">
+   <img src="img/immm7.PNG" alt="">
+   
+   <img src="img/immm3.PNG" alt="">
+    </div>
+</section>
+
+<main id="deal" >
+  <div class="border">
+  <div id="px">
+    <h4>
+      See personalized recommendations
+    </h4>
+    <button id="btny" >sign in</button>
+
+    <p id="para">New Customer</p>
+    <a href="https://www.amazon.com/">start here</a>
+  </div>
+  </div>
+</main>
+
+<div id="trend"><h5 id="back">
+back to top  
+</h5></div>
+
+<footer>
+  <div class="footer">
+  <div id="fqa"><a href="https://www.amazon.com/">FAQ</a></div>
+  <div class="help"><a href="https://www.amazon.com/">Help Center</a></div>
+  <div class="account"><a href="https://www.amazon.com/">Account</a></div>
+  <div class="media"><a href="https://www.amazon.com/">Media Center</a></div>
+  <div class="Investor"><a href="https://www.amazon.com/">Investor Relations</a></div>
+  <div class="job"><a href="https://sell.amazon.com/">Jobs</a></div>
+  <div class="way"><a href="https://sell.amazon.com/">Ways to Watch</a></div>
+  <div class="Terms"><a href="https://sell.amazon.com/">Terms of Use</a></div>
+  <div class="Privacy"><a href="https://www.aboutamazon.com/">Privacy</a></div>
+  <div class="contact"><a href="https://www.aboutamazon.com/">Contact Us</a></div>
+  <div class="legal"><a href="https://www.amazon.com/">Legal Notices</a></div>
+  <div class="speed"><a href="https://www.amazon.com/">Speed Test</a></div>
+  <div class="Cookie"><a href="https://www.amazon.com/">Cookie Preferences</a></div>
+  <div class="coral"><a href="https://www.amazon.com/">Corporate Information</a></div>
+  <div class="only"><a href="https://www.amazon.com/">Only on Amazon</a></div>
+ </div>
+ 
+</footer>
+<div class=" bro">
+<div id="finally">
+  © 1996-2025, Amazon.com, Inc. or its affiliates&#10084;
+ </div>
+</div>
+
+
+
+<script src="amazon.js"></script>
+
+</body>
+</html>
