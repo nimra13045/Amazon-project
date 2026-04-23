@@ -28,6 +28,11 @@ It is designed for desktop view only and made for learning purposes.
 
 ---
 
+## 🌐 Live Demo
+👉 [View Live Website](https://nimra13045.github.io/Amazon-project/)
+
+---
+
 ## 🎥 Project Demo Video
 👉 https://youtube.com/shorts/FPgxT8IjHNI
 
